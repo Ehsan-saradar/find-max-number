@@ -1,9 +1,9 @@
 
-all: client server
+all: dep client server
 
 dep:
 	@echo "--> Running dep"
-	@dep ensure
+	dep ensure
 
 protoc:
 	@echo "--> Generating Go files"
