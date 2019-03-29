@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+ package math_grpc;
+
+ service MathHandler {
+   rpc FindMaxNumber (stream FindMaxNumberRequest) returns (stream FindMaxNumberResponse) {}
+ }
+
+ message FindMaxNumberRequest {
+   int32 number = 1;
+   bytes signature =2;
+ }
+
+ message FindMaxNumberResponse {
+   int32 maxNumber = 1;
+ }
