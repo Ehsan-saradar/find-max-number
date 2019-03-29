@@ -71,6 +71,19 @@ Server output:
 
 Start server `./server start` and `./client start` in two separate terminal 
 
+Server output example:
+
+```bash
+./server start
+2019/03/27 10:53:50 start listening to 3000
+2019/03/27 10:53:53 start serving new client
+2019/03/27 10:53:53 send new max=4860
+2019/03/27 10:53:53 send new max=8100
+2019/03/27 10:53:53 send new max=9978
+2019/03/27 10:53:53 send new max=69136
+2019/03/27 10:53:53 client closed the stream.
+````
+
 Client output example:
 
 ```bash 
@@ -102,18 +115,7 @@ tcp://127.0.0.1:3000
 2019/03/27 10:53:53 new max number 69136 received
 ```
 
-Server output example:
 
-```bash
-./server start
-2019/03/27 10:53:50 start listening to 3000
-2019/03/27 10:53:53 start serving new client
-2019/03/27 10:53:53 send new max=4860
-2019/03/27 10:53:53 send new max=8100
-2019/03/27 10:53:53 send new max=9978
-2019/03/27 10:53:53 send new max=69136
-2019/03/27 10:53:53 client closed the stream.
-````
 
 
 
