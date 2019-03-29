@@ -14,10 +14,10 @@ As an example if client send (1,5,3,6,2,20) as stream of numbers with correct si
 
 ## Commands
 
-Client contains has the following 4 commands:
+Client has the following 4 commands:
 - `./client init`
 
-     create public/private key pairs. You can specify encryption type by flag `-encryption` and home directory by `--home`
+     create public/private key pairs. You can specify encryption type by flag `--encryption` and home directory by `--home`
 
 -  `./client check`
 
@@ -32,7 +32,7 @@ Client contains has the following 4 commands:
     shows client application version
 
 
-Server contains has the following 3 commands:
+Server has the following 3 commands:
 
 -  `./server check`
 
