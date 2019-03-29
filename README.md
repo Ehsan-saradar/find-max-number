@@ -172,5 +172,5 @@ The following picture shows the project architecture
 - Use Amino  (i.e. Protobuf4)
 - Encrypt the packet in order to prevent packet sniffing
 - Add sequence filed in request model in order to detect missing packets (numbers) and prevent man in the middle to change order of packets
-- It is assumed that the public key of the client is not known in advance. The only way to mitigate this is with a public key authentication system, such as the Web-of-Trust or Certificate Authorities
+- It is assumed that the public key of the client is known in advance. if not, the only way to mitigate this is with a public key authentication system, such as the Web-of-Trust or Certificate Authorities
 - It is assumed that the server is serving at most one instance of client application. FindMaxNumber should be changed in order to server multiple clients at the same time.
