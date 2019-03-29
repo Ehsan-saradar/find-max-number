@@ -131,11 +131,11 @@ We assume the following 4 layer architecture:
     
     Repository will act as data store handler. 
 
-    In this project we use repository to get stream of numbers in client application. We use file and console repository as repository.
+    In this project we use repository to get stream of numbers in client application. We use file and console input as repository.
 
 - Usecase
 
-    This layer will act as the business process handler. Any process will handled here. This layer will decide, which repository layer will use. And have responsibility to provide data to serve into delivery. Process the data doing calculation or anything will done here.
+    This layer will act as the business process handler. Any process will handled here. Process the data doing calculation or anything will done here.
 
     In this project we use the following as usecase:
     - Rsa
@@ -153,12 +153,12 @@ We assume the following 4 layer architecture:
         Implement FindMaxNumber logic
     - Input
 
-        Select data from repository and pass it to the delivery in client app.
+        Select data from repository and pass it to the delivery layer in client app.
 
 - Delivery
 
 
-    This layer will act as the presenter. Decide how the data will presented. Could be as REST API, or HTML File, or gRPC whatever the delivery type. 
+    This layer will act as the presenter. Decide how the data will presented. Could be as REST API, or HTML File,  gRPC or etc. 
     
     In this project we use gRPC as the delivery method
     
@@ -171,5 +171,4 @@ The following picture shows the project architecture
 - Encrypt the packet in order to prevent packet sniffing
 - Add sequence filed in request model in order to detect missing packets (numbers) and prevent man in the middle to change order of packets
 - It is assumed that the public key of the client is not known in advance. The only way to mitigate this is with a public key authentication system, such as the Web-of-Trust or Certificate Authorities
-- Use Amino  (i.e. Protobuf4)
 - It is assumed that the server is serving at most one instance of client application. FindMaxNumber should be changed in order to server multiple clients at the same time.
